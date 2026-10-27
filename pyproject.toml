@@ -1,0 +1,31 @@
+[project]
+name = "avito-recsys-model-comparison"
+version = "0.1.0"
+description = "Reproducible comparison of recommender-system models on Avito ML Cup 2025 data"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "duckdb>=2.0.0",
+    "ipykernel>=7.1.0",
+    "jupyterlab>=4.5.0",
+    "matplotlib>=3.10.0",
+    "numpy>=2.3.0",
+    "optuna>=5.0.0",
+    "pandas>=2.3.0",
+    "pyarrow>=22.0.0",
+    "scipy>=1.16.0",
+    "scipy-stubs~=1.18.1",
+    "torch>=2.9.0",
+    "tqdm>=4.67.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

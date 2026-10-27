@@ -13,15 +13,3 @@ uv sync
 uv run python recsys/download_data.py
 uv run python recsys/prepare_data.py
 ```
-
-## Модели
-
-| Файл | Модель |
-|---|---|
-| `models/item_knn.py` | Item-based KNN, косинусное сходство |
-| `models/als.py` | Implicit ALS |
-| `models/ease.py` | EASE |
-| `models/fm.py` | Факторизационная машина с метапризнаками объектов (категория, локация, корзина числа объявлений) |
-| `models/custom_target_als.py` | ALS с кастомным таргетом: `clip((rating - 3) / 2, 0, 1) * exp(-ln(2) * age_days / half_life)` |
-| `models/recommend.py` | Общая выдача top-N с исключением уже просмотренных объектов |
-
